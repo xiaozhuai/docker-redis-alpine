@@ -1,0 +1,9 @@
+version: '2'
+services:
+    redis:
+#        image: xiaozhuai/redis-alpine:latest
+        build: .
+        ports:
+            - 6379:6379
+        environment:
+            REDIS_ALLOW_EMPTY_PASSWORD: "yes"
