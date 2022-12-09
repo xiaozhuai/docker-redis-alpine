@@ -11,7 +11,6 @@ COPY entrypoint.sh /entrypoint.sh
 EXPOSE 6379
 VOLUME /data
 
-ENV REDIS_ALLOW_EMPTY_PASSWORD no
-ENV REDIS_PASSWORD root
+ENV REDIS_PASSWORD password
 
 ENTRYPOINT /entrypoint.sh
