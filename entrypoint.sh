@@ -2,9 +2,9 @@
 set -e
 
 if [ "${REDIS_PASSWORD}" = '' ]; then
-  echo "" >/etc/redis-password.conf
+  echo "# No password" >/etc/redis.d/01_password.conf
 else
-  echo "requirepass ${REDIS_PASSWORD}" >/etc/redis-password.conf
+  echo "requirepass ${REDIS_PASSWORD}" >/etc/redis.d/01_password.conf
 fi
 
 redis-server /etc/redis.conf
