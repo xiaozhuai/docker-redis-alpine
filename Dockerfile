@@ -12,4 +12,4 @@ VOLUME /data
 
 ENV REDIS_PASSWORD password
 
-ENTRYPOINT /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
