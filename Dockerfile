@@ -10,6 +10,6 @@ COPY entrypoint.sh /entrypoint.sh
 EXPOSE 6379
 VOLUME /data
 
-ENV REDIS_PASSWORD password
+ENV REDIS_PASSWORD="password"
 
 ENTRYPOINT ["/entrypoint.sh"]
